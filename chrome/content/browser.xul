@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://tabgroups/skin/skin.css" type="text/css"?>
+<!DOCTYPE tabgroups SYSTEM "chrome://tabgroups/locale/translations.dtd">
+<overlay id="tabgroups-overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <script type="text/javascript;version=1.8" src="tabview-browser.js" />
+
+  <broadcasterset id="mainBroadcasterSet">
+    <broadcaster id="tabviewGroupsNumber" groups="1"/>
+  </broadcasterset>
+
+  <commandset id="mainCommandSet">
+    <command id="Browser:ToggleTabView" oncommand="TabView.toggle();"/>
+  </commandset>
+
+  <keyset id="mainKeyset">
+    <key id="key_tabview" key="&tabView.commandkey;" command="Browser:ToggleTabView" modifiers="accel,shift"/>
+  </keyset>
+
+  <popupset id="mainPopupSet">
+    <menupopup id="tabContextMenu">
+      <menu id="context_tabViewMenu" label="&moveToGroup.label;"
+            accesskey="&moveToGroup.accesskey;">
+        <menupopup id="context_tabViewMenuPopup"
+                   onpopupshowing="if (event.target == this) TabView.moveToGroupPopupShowing(event);">
+          <menuseparator id="context_tabViewNamedGroups" hidden="true"/>
+          <menuitem id="context_tabViewNewGroup" label="&moveToNewGroup.label;"
+                    oncommand="TabView.moveTabTo(TabContextMenu.contextTab, null);"/>
+        </menupopup>
+      </menu>
+    </menupopup>
+  </popupset>
+</overlay>

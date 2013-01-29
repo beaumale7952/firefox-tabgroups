@@ -1,0 +1,11 @@
+content tabgroups chrome/content/
+overlay chrome://browser/content/browser.xul chrome://tabgroups/content/browser.xul
+
+locale tabgroups en-US locale/en-US/
+
+skin tabgroups      classic/1.0 skin/
+skin tabgroups-plat classic/1.0 skin/gnomestripe/ os=Linux
+skin tabgroups-plat classic/1.0 skin/winstripe/   os=WINNT
+skin tabgroups-plat classic/1.0 skin/pinstripe/   os=Darwin
+
+override chrome://tabgroups-plat/skin/tabview.png chrome://tabgroups/skin/tabview-lion.png os=Darwin osversion>=10.7
