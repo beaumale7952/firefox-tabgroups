@@ -4,11 +4,11 @@
      xmlns:em="http://www.mozilla.org/2004/em-rdf#">
 
   <Description about="urn:mozilla:install-manifest">
-    <em:id>tabgroups-extension@timtaubert.de</em:id>
+    <em:id>firefox-tabgroups@mozilla.com</em:id>
     <em:name>Tab Groups</em:name>
     <em:version>0.1</em:version>
     <em:creator>Mozilla</em:creator>
-    <em:description>Provides tab groups in Firefox.</em:description>
+    <em:description>Provides tab groups for Firefox.</em:description>
 
     <em:targetApplication>
       <Description>
