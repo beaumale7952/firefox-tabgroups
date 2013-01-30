@@ -63,6 +63,7 @@ let TabView = {
     let ctxMenu = document.getElementById("tabContextMenu");
     ctxMenu.addEventListener("popupshowing", this);
 
+    window.addEventListener("SSRestoreIntoWindow", this);
     window.addEventListener("unload", this);
 
     this._initialized = true;
@@ -91,6 +92,10 @@ let TabView = {
         if (this._tabBrowserHasHiddenTabs())
           this._setBrowserKeyHandlers();
         break;
+      case "SSRestoreIntoWindow":
+        if (this._tabBrowserHasHiddenTabs())
+          event.preventDefault();
+        break;
       case "popupshowing":
         // Hide "Move to Group" if it's a pinned tab.
         document.getElementById("context_tabViewMenu").hidden =
@@ -114,6 +119,7 @@ let TabView = {
     gBrowser.tabContainer.removeEventListener("TabShow", this);
     gBrowser.tabContainer.removeEventListener("TabClose", this);
 
+    window.removeEventListener("SSRestoreIntoWindow", this);
     window.removeEventListener("SSWindowStateReady", this);
     window.removeEventListener("unload", this);
 
