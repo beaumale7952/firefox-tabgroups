@@ -9,6 +9,13 @@ const Ci = Components.interfaces;
 const Cu = Components.utils;
 const Cr = Components.results;
 
+let os = Cc["@mozilla.org/xre/app-info;1"].getService(Ci.nsIXULRuntime).OS;
+
+const XP_WIN = (os == "WINNT");
+const XP_LINUX = (os == "Linux");
+const XP_MACOSX = (os == "Darwin");
+const XP_UNIX = (os == "Linux" || os == "Darwin");
+
 Cu.import("chrome://tabgroups/content/utils.jsm");
 Cu.import("resource://gre/modules/Services.jsm");
 Cu.import("resource://gre/modules/XPCOMUtils.jsm");

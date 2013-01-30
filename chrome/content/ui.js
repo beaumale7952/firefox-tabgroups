@@ -457,18 +457,18 @@ let UI = {
     });
     this._reorderTabItemsOnShow = [];
 
-/*#ifdef XP_WIN TODO
-    // Restore the full height when showing TabView
-    gTabViewFrame.style.marginTop = "";
-#endif */
+    if (XP_WIN) {
+      // Restore the full height when showing TabView
+      gTabViewFrame.style.marginTop = "";
+    }
     gTabViewDeck.selectedPanel = gTabViewFrame;
     gWindow.TabsInTitlebar.allowedBy("tabview-open", false);
     gTabViewFrame.contentWindow.focus();
 
     gBrowser.updateTitlebar();
-/*#ifdef XP_MACOSX TODO
-    this.setTitlebarColors(true);
-#endif*/
+    if (XP_MACOSX) {
+      this.setTitlebarColors(true);
+    }
     let event = document.createEvent("Events");
     event.initEvent("tabviewshown", true, false);
 
@@ -531,21 +531,21 @@ let UI = {
     });
     this._reorderTabsOnHide = [];
 
-/*#ifdef XP_WIN TODO
-    // Push the top of TabView frame to behind the tabbrowser, so glass can show
-    // XXX bug 586679: avoid shrinking the iframe and squishing iframe contents
-    // as well as avoiding the flash of black as we animate out
-    gTabViewFrame.style.marginTop = gBrowser.boxObject.y + "px";
-#endif*/
+    if (XP_WIN) {
+      // Push the top of TabView frame to behind the tabbrowser, so glass can show
+      // XXX bug 586679: avoid shrinking the iframe and squishing iframe contents
+      // as well as avoiding the flash of black as we animate out
+      gTabViewFrame.style.marginTop = gBrowser.boxObject.y + "px";
+    }
     gTabViewDeck.selectedPanel = gBrowserPanel;
     gWindow.TabsInTitlebar.allowedBy("tabview-open", true);
     gBrowser.selectedBrowser.focus();
 
     gBrowser.updateTitlebar();
     gBrowser.tabContainer.mTabstrip.smoothScroll = this._originalSmoothScroll;
-/*#ifdef XP_MACOSX TODO
-    this.setTitlebarColors(false);
-#endif*/
+    if (XP_MACOSX) {
+      this.setTitlebarColors(false);
+    }
     Storage.saveVisibilityData(gWindow, "false");
 
     this._isChangingVisibility = false;
@@ -555,7 +555,6 @@ let UI = {
     dispatchEvent(event);
   },
 
-/*#ifdef XP_MACOSX TODO
   // ----------
   // Function: setTitlebarColors
   // Used on the Mac to make the title bar match the gradient in the rest of the
@@ -579,7 +578,6 @@ let UI = {
       mainWindow.removeAttribute("inactivetitlebarcolor");
     }
   },
-#endif*/
 
   // ----------
   // Function: storageBusy
@@ -926,21 +924,23 @@ let UI = {
   // ----------
   // Function: _setupBrowserKeys
   // Sets up the allowed browser keys using key elements.
-  _setupBrowserKeys: function UI__setupKeyWhiteList() {
+  _setupBrowserKeys: function UI__setupBrowserKeys() {
     let keys = {};
-
-    [
-//#ifdef XP_UNIX TODO
-      "quitApplication",
-/*#else
-      "redo",
-#endif*/
-/*#ifdef XP_MACOSX TODO
-      "preferencesCmdMac", "minimizeWindow", "hideThisAppCmdMac",
-#endif*/
-      "newNavigator", "newNavigatorTab", "undo", "cut", "copy", "paste", 
+    let ids = [
+      "newNavigator", "newNavigatorTab", "undo", "cut", "copy", "paste",
       "selectAll", "find"
-    ].forEach(function(key) {
+    ];
+
+    if (XP_UNIX) {
+      ids.push("quitApplication");
+    } else {
+      ids.push("redo");
+    }
+    if (XP_MACOSX) {
+      ids.push("preferencesCmdMac", "minimizeWindow", "hideThisAppCmdMac");
+    }
+
+    ids.forEach(function(key) {
       let element = gWindow.document.getElementById("key_" + key);
       let code = element.getAttribute("key").toLocaleLowerCase().charCodeAt(0);
       keys[code] = key;
@@ -948,18 +948,17 @@ let UI = {
     this._browserKeys = keys;
 
     keys = {};
+    ids = ["closeWindow", "tabview", "undoCloseTab", "undoCloseWindow"];
     // The lower case letters are passed to processBrowserKeys() even with shift 
     // key when stimulating a key press using EventUtils.synthesizeKey() so need 
     // to handle both upper and lower cases here.
-    [
-//#ifdef XP_UNIX TODO
-      "redo",
-//#endif
-/*#ifdef XP_MACOSX TODO
-      "fullScreen",
-#endif*/
-      "closeWindow", "tabview", "undoCloseTab", "undoCloseWindow"
-    ].forEach(function(key) {
+    if (XP_UNIX) {
+      ids.push("redo");
+    }
+    if (XP_MACOSX) {
+      ids.push("fullScreen");
+    }
+    ids.forEach(function(key) {
       let element = gWindow.document.getElementById("key_" + key);
       let code = element.getAttribute("key").toLocaleLowerCase().charCodeAt(0);
       keys[code] = key;
@@ -989,11 +988,7 @@ let UI = {
         if (evt.altKey)
           return;
 
-/*#ifdef XP_MACOSX TODO
-        if (evt.metaKey) {
-#else*/
-        if (evt.ctrlKey) {
-//#endif
+        if ((XP_MACOSX && evt.metaKey) || (!XP_MACOSX && evt.ctrlKey)) {
           let preventDefault = true;
           if (evt.shiftKey) {
             // when a user presses ctrl+shift+key, upper case letter charCode 
