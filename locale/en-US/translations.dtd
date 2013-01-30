@@ -8,5 +8,7 @@
 <!ENTITY moveToGroup.accesskey "M">
 <!ENTITY moveToNewGroup.label  "New Group">
 
-<!ENTITY tabGroupsButton.label   "Tab Groups">
+<!ENTITY tabGroups.label   "Tab Groups">
 <!ENTITY tabGroupsButton.tooltip "Group your tabs">
+
+<!ENTITY viewTabGroups.accesskey "G">

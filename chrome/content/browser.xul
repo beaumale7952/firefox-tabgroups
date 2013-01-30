@@ -19,6 +19,14 @@
     <key id="key_tabview" key="&tabView.commandkey;" command="Browser:ToggleTabView" modifiers="accel,shift"/>
   </keyset>
 
+  <menupopup id="menu_viewPopup">
+    <menuitem id="menu_tabview"
+              label="&tabGroups.label;"
+              command="Browser:ToggleTabView"
+              accesskey="&viewTabGroups.accesskey;"
+              position="1"/>
+  </menupopup>
+
   <menupopup id="tabContextMenu">
     <menu id="context_tabViewMenu" label="&moveToGroup.label;"
           accesskey="&moveToGroup.accesskey;" position="4">
@@ -33,7 +41,7 @@
 
   <toolbarpalette id="BrowserToolbarPalette">
     <toolbarbutton id="tabview-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
-                   label="&tabGroupsButton.label;"
+                   label="&tabGroups.label;"
                    command="Browser:ToggleTabView"
                    tooltiptext="&tabGroupsButton.tooltip;"
                    observes="tabviewGroupsNumber"/>
