@@ -8,9 +8,7 @@
     <em:name>Tab Groups</em:name>
     <em:version>0.1</em:version>
     <em:creator>Mozilla</em:creator>
-
     <em:description>Provides tab groups in Firefox.</em:description>
-    <em:optionsURL>chrome://tabgroups/content/options.xul</em:optionsURL>
 
     <em:targetApplication>
       <Description>
