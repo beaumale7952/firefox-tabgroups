@@ -465,7 +465,7 @@ let UI = {
     gWindow.TabsInTitlebar.allowedBy("tabview-open", false);
     gTabViewFrame.contentWindow.focus();
 
-    gBrowser.updateTitlebar();
+    gBrowser.freezeTitlebar(gTabView.windowTitle);
     if (XP_MACOSX) {
       this.setTitlebarColors(true);
     }
@@ -541,7 +541,7 @@ let UI = {
     gWindow.TabsInTitlebar.allowedBy("tabview-open", true);
     gBrowser.selectedBrowser.focus();
 
-    gBrowser.updateTitlebar();
+    gBrowser.unfreezeTitlebar();
     gBrowser.tabContainer.mTabstrip.smoothScroll = this._originalSmoothScroll;
     if (XP_MACOSX) {
       this.setTitlebarColors(false);
