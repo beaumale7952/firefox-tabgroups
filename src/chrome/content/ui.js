@@ -675,7 +675,7 @@ let UI = {
 
           let groupItem = GroupItems.getActiveGroupItem();
 
-          // 1) Only go back to the TabView tab when there you close the last
+          // Only go back to the TabView tab when there you close the last
           // tab of a groupItem.
           let closingLastOfGroup = (groupItem && 
               groupItem._children.length == 1 && 
@@ -762,9 +762,8 @@ let UI = {
     this._currentTab = tab;
 
     if (this.isTabViewVisible()) {
-      // We want to zoom in if:
-      // 1) we didn't just restore a tab via Ctrl+Shift+T
-      // 2) the currently selected tab is the last created tab and has a tabItem
+      // We want to zoom in if the currently selected tab is
+      // the last created tab and has a tabItem
       if (this._lastOpenedTab == tab && tab._tabViewTabItem) {
         tab._tabViewTabItem.zoomIn(true);
         this._lastOpenedTab = null;
