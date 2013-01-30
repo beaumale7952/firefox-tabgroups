@@ -8,4 +8,8 @@ skin tabgroups-plat classic/1.0 skin/gnomestripe/ os=Linux
 skin tabgroups-plat classic/1.0 skin/winstripe/   os=WINNT
 skin tabgroups-plat classic/1.0 skin/pinstripe/   os=Darwin
 
+style chrome://global/content/customizeToolbar.xul chrome://tabgroups/skin/gnomestripe/browser.css os=Linux
+style chrome://global/content/customizeToolbar.xul chrome://tabgroups/skin/winstripe/browser.css   os=WINNT
+style chrome://global/content/customizeToolbar.xul chrome://tabgroups/skin/pinstripe/browser.css   os=Darwin
+
 override chrome://tabgroups-plat/skin/tabview.png chrome://tabgroups/skin/tabview-lion.png os=Darwin osversion>=10.7

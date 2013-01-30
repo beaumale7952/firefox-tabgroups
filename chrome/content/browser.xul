@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<?xml-stylesheet href="chrome://tabgroups/skin/skin.css" type="text/css"?>
+<?xml-stylesheet href="chrome://tabgroups/skin/browser.css" type="text/css"?>
+<?xml-stylesheet href="chrome://tabgroups-plat/skin/browser.css" type="text/css"?>
 <!DOCTYPE tabgroups SYSTEM "chrome://tabgroups/locale/translations.dtd">
 <overlay id="tabgroups-overlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
