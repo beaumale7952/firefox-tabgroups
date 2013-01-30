@@ -1,0 +1,11 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY  moveToGroup.label                 "Verschieben in Gruppe">
+<!ENTITY  moveToGroup.accesskey             "V">
+<!ENTITY  moveToNewGroup.label              "Neue Gruppe">
+<!ENTITY tabGroups.label         "Tab-Gruppen">
+<!ENTITY tabGroupsButton.tooltip       "Tabs gruppieren">
+<!ENTITY viewTabGroups.accesskey     "g">
+<!ENTITY tabView.commandkey           "e">

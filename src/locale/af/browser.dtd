@@ -1,0 +1,11 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY  moveToGroup.label                  "Skuif na groep">
+<!ENTITY  moveToGroup.accesskey              "S">
+<!ENTITY  moveToNewGroup.label               "Nuwe groep">
+<!ENTITY tabGroups.label        "Oortjie-groepe">
+<!ENTITY tabGroupsButton.tooltip      "Groepeer jou oortjies">
+<!ENTITY viewTabGroups.accesskey        "g">
+<!ENTITY tabView.commandkey           "e">

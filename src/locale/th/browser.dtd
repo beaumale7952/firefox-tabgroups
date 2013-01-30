@@ -1,0 +1,11 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY  moveToGroup.label                  "ย้ายไปยังกลุ่ม">
+<!ENTITY  moveToGroup.accesskey              "ย">
+<!ENTITY  moveToNewGroup.label               "กลุ่มใหม่">
+<!ENTITY tabGroups.label        "กลุ่มแท็บ">
+<!ENTITY tabGroupsButton.tooltip      "จัดกลุ่มแท็บของคุณ">
+<!ENTITY viewTabGroups.accesskey        "ล">
+<!ENTITY tabView.commandkey           "e">

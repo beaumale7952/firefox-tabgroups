@@ -1,0 +1,11 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY tabView.commandkey "e">
+<!ENTITY tabGroups.label "ටැබ් සමූහ">
+<!ENTITY moveToNewGroup.label "නව සමූහය">
+<!ENTITY moveToGroup.label "සමූහයට යන්න">
+<!ENTITY tabGroupsButton.tooltip "ඔබගේ ටැබ් සමූහගත කරන්න">
+<!ENTITY viewTabGroups.accesskey "G">
+<!ENTITY moveToGroup.accesskey "M">

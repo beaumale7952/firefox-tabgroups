@@ -1,0 +1,11 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY moveToGroup.label "Sposta nel gruppo">
+<!ENTITY moveToGroup.accesskey "o">
+<!ENTITY moveToNewGroup.label "Nuovo gruppo">
+<!ENTITY tabGroups.label "Gruppi di schede">
+<!ENTITY tabGroupsButton.tooltip "Raggruppa le schede">
+<!ENTITY viewTabGroups.accesskey "G">
+<!ENTITY tabView.commandkey "e">

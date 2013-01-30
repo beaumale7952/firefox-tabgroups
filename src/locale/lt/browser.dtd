@@ -1,0 +1,11 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY  moveToGroup.label                  "Perkelti į grupę">
+<!ENTITY  moveToGroup.accesskey              "g">
+<!ENTITY  moveToNewGroup.label               "Nauja grupė">
+<!ENTITY tabGroups.label        "Kortelių grupės">
+<!ENTITY tabGroupsButton.tooltip      "Grupuoti korteles">
+<!ENTITY viewTabGroups.accesskey          "g">
+<!ENTITY tabView.commandkey           "e">

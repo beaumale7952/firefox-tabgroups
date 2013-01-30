@@ -1,0 +1,11 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY moveToGroup.label "Bog go Grúpa">
+<!ENTITY moveToGroup.accesskey "B">
+<!ENTITY moveToNewGroup.label "Grúpa Nua">
+<!ENTITY tabGroups.label "Grúpaí Cluaisíní">
+<!ENTITY tabGroupsButton.tooltip "Grúpáil do chuid cluaisíní">
+<!ENTITY viewTabGroups.accesskey "G">
+<!ENTITY tabView.commandkey "e">

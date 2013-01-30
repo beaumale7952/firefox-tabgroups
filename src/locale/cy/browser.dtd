@@ -1,0 +1,11 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY  moveToGroup.label                  "Symud i Grŵp">
+<!ENTITY  moveToGroup.accesskey              "S">
+<!ENTITY  moveToNewGroup.label               "Grŵp Newydd">
+<!ENTITY tabGroups.label        "Grwpiau Tab">
+<!ENTITY tabGroupsButton.tooltip      "Grwpio eich Tabiau">
+<!ENTITY viewTabGroups.accesskey        "G">
+<!ENTITY tabView.commandkey           "e">

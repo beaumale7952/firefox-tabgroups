@@ -1,0 +1,11 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY  moveToGroup.label                  "העבר לקבוצה">
+<!ENTITY  moveToGroup.accesskey              "ה">
+<!ENTITY  moveToNewGroup.label               "קבוצה חדשה">
+<!ENTITY tabGroups.label        "קבוצות לשוניות">
+<!ENTITY tabGroupsButton.tooltip      "קבץ את הלשוניות שלך">
+<!ENTITY viewTabGroups.accesskey        "ק">
+<!ENTITY tabView.commandkey           "e">

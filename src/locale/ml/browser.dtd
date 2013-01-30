@@ -1,0 +1,11 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY  moveToGroup.label                  "ഗ്രൂപ്പിലേക്കു് നീക്കുക">
+<!ENTITY  moveToGroup.accesskey              "M">
+<!ENTITY  moveToNewGroup.label               "പുതിയ ഗ്രൂപ്പ്">
+<!ENTITY tabGroups.label        "റ്റാബ് ഗ്രൂപ്പുകള്‍">
+<!ENTITY tabGroupsButton.tooltip      "റ്റാബുകള്‍ ഒന്നിച്ചാക്കുക">
+<!ENTITY tabView.commandkey           "e">
+<!ENTITY viewTabGroups.accesskey        "G">

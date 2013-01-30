@@ -1,0 +1,11 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY  moveToGroup.label                  "Ganandi margaa do">
+<!ENTITY  moveToGroup.accesskey              "G">
+<!ENTITY  moveToNewGroup.label               "Marga taaga">
+<!ENTITY tabGroups.label        "Nor loku margarey">
+<!ENTITY tabGroupsButton.tooltip      "War nor lokey marga">
+<!ENTITY viewTabGroups.accesskey        "g">
+<!ENTITY tabView.commandkey           "e">

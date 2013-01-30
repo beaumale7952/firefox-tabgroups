@@ -1,0 +1,11 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY  moveToGroup.label                  "Перенести в групу">
+<!ENTITY  moveToGroup.accesskey              "н">
+<!ENTITY  moveToNewGroup.label               "Нова група">
+<!ENTITY tabGroups.label        "Групи вкладок">
+<!ENTITY tabGroupsButton.tooltip      "Впорядкуйте ваші вкладки">
+<!ENTITY viewTabGroups.accesskey        "Г">
+<!ENTITY tabView.commandkey           "e">

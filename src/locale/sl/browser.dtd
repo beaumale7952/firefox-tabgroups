@@ -1,0 +1,11 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY  moveToGroup.label                  "Premakni v skupino">
+<!ENTITY  moveToGroup.accesskey              "m">
+<!ENTITY  moveToNewGroup.label               "Nova skupina">
+<!ENTITY tabGroups.label        "Skupine zavihkov">
+<!ENTITY tabGroupsButton.tooltip      "Združite svoje zavihke">
+<!ENTITY viewTabGroups.accesskey        "z">
+<!ENTITY tabView.commandkey           "e">

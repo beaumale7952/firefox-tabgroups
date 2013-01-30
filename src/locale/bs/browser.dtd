@@ -1,0 +1,11 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY  moveToGroup.label                  "Premjesti u grupu">
+<!ENTITY  moveToGroup.accesskey              "m">
+<!ENTITY  moveToNewGroup.label               "Nova grupa">
+<!ENTITY tabGroups.label        "Grupe tabova">
+<!ENTITY tabGroupsButton.tooltip      "Grupišite vaše tabove">
+<!ENTITY viewTabGroups.accesskey        "G">
+<!ENTITY tabView.commandkey           "e">

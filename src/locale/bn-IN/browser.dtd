@@ -1,0 +1,11 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY tabGroups.label        "ট্যাবের শ্রেণী">
+<!ENTITY tabGroupsButton.tooltip      "ট্যাবগুলিকে শ্রেণীভুক্ত করুন">
+<!ENTITY viewTabGroups.accesskey        "G">
+<!ENTITY tabView.commandkey           "e">
+<!ENTITY  moveToGroup.label                  "চিহ্নিত শ্রেণীতে পরিবর্তন করুন">
+<!ENTITY  moveToGroup.accesskey              "M">
+<!ENTITY  moveToNewGroup.label               "নতুন শ্রেণী">

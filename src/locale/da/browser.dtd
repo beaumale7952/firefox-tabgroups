@@ -1,0 +1,11 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY  moveToGroup.label                  "Flyt til gruppe">
+<!ENTITY  moveToGroup.accesskey              "g">
+<!ENTITY  moveToNewGroup.label               "Ny gruppe">
+<!ENTITY tabGroups.label        "Fanebladsgrupper">
+<!ENTITY tabGroupsButton.tooltip      "Organiser dine faneblade">
+<!ENTITY viewTabGroups.accesskey        "g">
+<!ENTITY tabView.commandkey           "e">

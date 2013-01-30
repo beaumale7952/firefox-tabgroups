@@ -1,0 +1,11 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY  moveToGroup.label                  "Топқа жылжыту">
+<!ENTITY  moveToGroup.accesskey              "ы">
+<!ENTITY  moveToNewGroup.label               "Жаңа топ">
+<!ENTITY tabGroups.label        "Беттер топтары">
+<!ENTITY tabGroupsButton.tooltip      "Браузер беттерін топтау">
+<!ENTITY viewTabGroups.accesskey        "т">
+<!ENTITY tabView.commandkey           "e">

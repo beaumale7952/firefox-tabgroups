@@ -14,18 +14,25 @@ LOCALES="ach af ak ar ast be bg bn-BD bn-IN br bs ca cs cy da de el en-GB     \
 for LOCALE in $LOCALES
 do
   DIR=src/locale/$LOCALE/
-  FILE=$DIR/tabview.properties
   rm -fr $DIR; mkdir $DIR
+
+  FILE=$DIR/tabview.properties
   cp $(dirname $DIR)/tabview.properties $DIR
 
   URL=http://hg.mozilla.org/l10n-central/$LOCALE/raw-file/tip/browser/chrome/browser/tabview.properties
   curl -s $URL | grep -v sessionStore | grep -v '^#' >> $FILE
-
   echo >> $FILE
+  echo -n .
 
   URL=http://hg.mozilla.org/l10n-central/$LOCALE/raw-file/tip/browser/chrome/browser/browser.properties
   curl -s $URL | awk 'BEGIN {x=0} { if ($0~/^# TabView/) {x=1} if ($0~/^$/) {x=0} if (x==1) {print $0} }' >> $FILE
+  echo -n .
 
+  FILE=$DIR/browser.dtd
+  cp $(dirname $DIR)/browser.dtd $DIR
+
+  URL=http://hg.mozilla.org/l10n-central/$LOCALE/raw-file/tip/browser/chrome/browser/browser.dtd
+  curl -s $URL | egrep 'tabView|moveToGroup|moveToNewGroup|viewTabGroups\.accesskey|tabGroupsButton' | sed 's/tabGroupsButton\.label/tabGroups.label/' >> $FILE
   echo -n .
 done
 

@@ -1,0 +1,11 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY  moveToGroup.label                  "Šuthišetša sehlopheng">
+<!ENTITY  moveToGroup.accesskey              "u">
+<!ENTITY  moveToNewGroup.label               "Sehlopha se seswa">
+<!ENTITY tabGroups.label        "Dihlopha tša thepo">
+<!ENTITY tabGroupsButton.tooltip      "Hlopha dithepo tša gago">
+<!ENTITY viewTabGroups.accesskey        "D">
+<!ENTITY tabView.commandkey           "e">

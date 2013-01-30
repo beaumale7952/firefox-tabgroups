@@ -1,0 +1,11 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY  moveToGroup.label                  "Μετακίνηση στην ομάδα">
+<!ENTITY  moveToGroup.accesskey              "Μ">
+<!ENTITY  moveToNewGroup.label               "Νέα ομάδα">
+<!ENTITY tabView.commandkey           "e">
+<!ENTITY tabGroups.label        "Ομάδες καρτελών">
+<!ENTITY tabGroupsButton.tooltip      "Ομαδοποίηση των καρτελών σας">
+<!ENTITY viewTabGroups.accesskey        "μ">

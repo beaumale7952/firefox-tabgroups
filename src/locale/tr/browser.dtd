@@ -1,0 +1,11 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY moveToGroup.label "Gruba taşı">
+<!ENTITY moveToGroup.accesskey "t">
+<!ENTITY moveToNewGroup.label "Yeni grup">
+<!ENTITY tabGroups.label "Sekme grupları">
+<!ENTITY tabGroupsButton.tooltip "Sekmelerinizi gruplandırın">
+<!ENTITY viewTabGroups.accesskey "u">
+<!ENTITY tabView.commandkey "e">

@@ -1,0 +1,11 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY  moveToGroup.label                  "Pārvietot uz grupu">
+<!ENTITY  moveToGroup.accesskey              "P">
+<!ENTITY  moveToNewGroup.label               "Jauna grupa">
+<!ENTITY tabGroups.label        "Ciļņu grupas">
+<!ENTITY tabGroupsButton.tooltip      "Grupējiet savas cilnes">
+<!ENTITY viewTabGroups.accesskey        "G">
+<!ENTITY tabView.commandkey           "e">

@@ -1,0 +1,11 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY  moveToGroup.label                  "그룹 이동">
+<!ENTITY  moveToGroup.accesskey              "M">
+<!ENTITY  moveToNewGroup.label               "새 그룹">
+<!ENTITY tabGroups.label        "탭 그룹">
+<!ENTITY tabGroupsButton.tooltip      "탭 그룹으로 보기">
+<!ENTITY viewTabGroups.accesskey        "G">
+<!ENTITY tabView.commandkey           "e">

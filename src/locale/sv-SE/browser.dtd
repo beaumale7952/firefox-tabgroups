@@ -1,0 +1,11 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY  moveToGroup.label                  "Flytta till grupp">
+<!ENTITY  moveToGroup.accesskey              "F">
+<!ENTITY  moveToNewGroup.label               "Ny grupp">
+<!ENTITY tabGroups.label        "Flikgrupper">
+<!ENTITY tabGroupsButton.tooltip      "Gruppera dina flikar">
+<!ENTITY viewTabGroups.accesskey        "F">
+<!ENTITY tabView.commandkey           "e">

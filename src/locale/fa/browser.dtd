@@ -1,0 +1,11 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY moveToGroup.label "انتقال به گروه">
+<!ENTITY moveToGroup.accesskey "ق">
+<!ENTITY moveToNewGroup.label "گروه جدید">
+<!ENTITY tabGroups.label "گروه‌بندی زبانه‌ها">
+<!ENTITY tabGroupsButton.tooltip "زبانه‌های موجود را گروه‌بندی کنید">
+<!ENTITY viewTabGroups.accesskey "گ">
+<!ENTITY tabView.commandkey "e">

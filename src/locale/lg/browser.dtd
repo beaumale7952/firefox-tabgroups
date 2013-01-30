@@ -1,0 +1,11 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY  moveToGroup.label                  "Teeka mu Kibinja">
+<!ENTITY  moveToGroup.accesskey              "T">
+<!ENTITY  moveToNewGroup.label               "Kibinja kippya">
+<!ENTITY tabGroups.label        "Bibinja bya Mapeesa">
+<!ENTITY tabGroupsButton.tooltip      "Teeka mu Bibinja Amapeesa go">
+<!ENTITY viewTabGroups.accesskey        "e">
+<!ENTITY tabView.commandkey           "e">

@@ -1,0 +1,11 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY tabView.commandkey "e">
+<!ENTITY tabGroups.label "தத்தல்க் குழுகள்">
+<!ENTITY moveToNewGroup.label "புதிய குழு">
+<!ENTITY moveToGroup.label "குழுவுக்கு நகர்த்துக">
+<!ENTITY tabGroupsButton.tooltip "உங்களுடைய தத்தல்களை குழுவாக்குக">
+<!ENTITY viewTabGroups.accesskey "G">
+<!ENTITY moveToGroup.accesskey "M">

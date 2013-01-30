@@ -1,0 +1,11 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY  moveToGroup.label                  "Di chuyển vào Nhóm">
+<!ENTITY  moveToGroup.accesskey              "y">
+<!ENTITY  moveToNewGroup.label               "Nhóm Mới">
+<!ENTITY tabGroups.label        "Các Nhóm Thẻ">
+<!ENTITY tabGroupsButton.tooltip      "Nhóm các thẻ của bạn">
+<!ENTITY viewTabGroups.accesskey        "N">
+<!ENTITY tabView.commandkey           "e">

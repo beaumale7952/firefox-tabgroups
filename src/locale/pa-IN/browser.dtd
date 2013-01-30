@@ -1,0 +1,11 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY  moveToGroup.label                  "ਗਰੁੱਪ 'ਚ ਭੇਜੋ">
+<!ENTITY  moveToGroup.accesskey              "M">
+<!ENTITY  moveToNewGroup.label               "ਨਵਾਂ ਗਰੁੱਪ">
+<!ENTITY tabGroups.label        "ਟੈਬ ਗਰੁੱਪ">
+<!ENTITY tabGroupsButton.tooltip      "ਆਪਣੀ ਟੈਬਾਂ ਦਾ ਗਰੁੱਪ ਬਣਾਓ">
+<!ENTITY viewTabGroups.accesskey        "G">
+<!ENTITY tabView.commandkey           "e">

@@ -1,0 +1,11 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY  moveToGroup.label                  "Biguhêze komê">
+<!ENTITY  moveToGroup.accesskey              "m">
+<!ENTITY  moveToNewGroup.label               "Koma nû">
+<!ENTITY tabGroups.label        "Komên hilpekînan">
+<!ENTITY tabGroupsButton.tooltip      "Hilpekînan li koman dabeş bike">
+<!ENTITY viewTabGroups.accesskey        "K">
+<!ENTITY tabView.commandkey           "e">

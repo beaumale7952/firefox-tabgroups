@@ -1,0 +1,11 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY moveToGroup.label                   "Przenieś do grupy">
+<!ENTITY moveToGroup.accesskey               "e">
+<!ENTITY moveToNewGroup.label                "Nowa grupa">
+<!ENTITY tabGroups.label        "Grupy kart">
+<!ENTITY tabGroupsButton.tooltip      "Pogrupuj karty">
+<!ENTITY viewTabGroups.accesskey        "G">
+<!ENTITY tabView.commandkey           "e">

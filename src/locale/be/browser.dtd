@@ -1,0 +1,11 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY moveToGroup.label "Перамясціць у купу">
+<!ENTITY moveToGroup.accesskey "м">
+<!ENTITY moveToNewGroup.label "Новая купа">
+<!ENTITY tabGroups.label "Купы ўставак">
+<!ENTITY tabGroupsButton.tooltip "Купаванне вашых уставак">
+<!ENTITY viewTabGroups.accesskey "К">
+<!ENTITY tabView.commandkey "e">

@@ -1,0 +1,14 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY tabView.commandkey "e">
+
+<!ENTITY moveToGroup.label     "Move to Group">
+<!ENTITY moveToGroup.accesskey "M">
+<!ENTITY moveToNewGroup.label  "New Group">
+
+<!ENTITY tabGroups.label   "Tab Groups">
+<!ENTITY tabGroupsButton.tooltip "Group your tabs">
+
+<!ENTITY viewTabGroups.accesskey "G">
