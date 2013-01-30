@@ -49,49 +49,57 @@ let TabView = {
         }
       } catch (e) { }
 
-      let self = this;
-      // if a tab is changed from hidden to unhidden and the iframe is not
-      // initialized, load the iframe and setup the tab.
-      this._tabShowEventListener = function(event) {
-        if (!self._window)
-          self._initFrame(function() {
-            self._window.UI.onTabSelect(gBrowser.selectedTab);
-            if (self._closedLastVisibleTabBeforeFrameInitialized) {
-              self._closedLastVisibleTabBeforeFrameInitialized = false;
-              self._window.UI.showTabView(false);
-            }
-          });
-      };
-      this._tabCloseEventListener = function(event) {
-        if (!self._window && gBrowser.visibleTabs.length == 0)
-          self._closedLastVisibleTabBeforeFrameInitialized = true;
-      };
-      gBrowser.tabContainer.addEventListener(
-        "TabShow", this._tabShowEventListener, false);
-      gBrowser.tabContainer.addEventListener(
-        "TabClose", this._tabCloseEventListener, false);
+      gBrowser.tabContainer.addEventListener("TabShow", this);
+      gBrowser.tabContainer.addEventListener("TabClose", this);
 
      if (this._tabBrowserHasHiddenTabs()) {
        this._setBrowserKeyHandlers();
      } else {
        // for restoring last session and undoing recently closed window
-       this._SSWindowStateReadyListener = function (event) {
-         if (this._tabBrowserHasHiddenTabs())
-           this._setBrowserKeyHandlers();
-       }.bind(this);
-       window.addEventListener(
-         "SSWindowStateReady", this._SSWindowStateReadyListener, false);
+       window.addEventListener("SSWindowStateReady", this);
       }
     }
 
-    let self = this;
+    let ctxMenu = document.getElementById("tabContextMenu");
+    ctxMenu.addEventListener("popupshowing", this);
 
-    window.addEventListener("unload", function onUnload() {
-      window.removeEventListener("unload", onUnload);
-      self.uninit();
-    });
+    window.addEventListener("unload", this);
 
     this._initialized = true;
+  },
+
+  handleEvent: function TabView_handleEvent(event) {
+    switch (event.type) {
+      case "TabShow":
+        if (!this._window) {
+          // if a tab is changed from hidden to unhidden and the iframe is not
+          // initialized, load the iframe and setup the tab.
+          this._initFrame(function() {
+            this._window.UI.onTabSelect(gBrowser.selectedTab);
+            if (this._closedLastVisibleTabBeforeFrameInitialized) {
+              this._closedLastVisibleTabBeforeFrameInitialized = false;
+              this._window.UI.showTabView(false);
+            }
+          });
+        }
+        break;
+      case "TabClose":
+        if (!this._window && gBrowser.visibleTabs.length == 0)
+          this._closedLastVisibleTabBeforeFrameInitialized = true;
+        break;
+      case "SSWindowStateReady":
+        if (this._tabBrowserHasHiddenTabs())
+          this._setBrowserKeyHandlers();
+        break;
+      case "popupshowing":
+        // Hide "Move to Group" if it's a pinned tab.
+        document.getElementById("context_tabViewMenu").hidden =
+          TabContextMenu.contextTab.pinned;
+        break;
+      case "unload":
+        this.uninit();
+        break;
+    }
   },
 
   // ----------
@@ -100,17 +108,14 @@ let TabView = {
     if (!this._initialized)
       return;
 
-    if (this._tabShowEventListener)
-      gBrowser.tabContainer.removeEventListener(
-        "TabShow", this._tabShowEventListener, false);
+    let ctxMenu = document.getElementById("tabContextMenu");
+    ctxMenu.removeEventListener("popupshowing", this);
 
-    if (this._tabCloseEventListener)
-      gBrowser.tabContainer.removeEventListener(
-        "TabClose", this._tabCloseEventListener, false);
+    gBrowser.tabContainer.removeEventListener("TabShow", this);
+    gBrowser.tabContainer.removeEventListener("TabClose", this);
 
-    if (this._SSWindowStateReadyListener)
-      window.removeEventListener(
-        "SSWindowStateReady", this._SSWindowStateReadyListener, false);
+    window.removeEventListener("SSWindowStateReady", this);
+    window.removeEventListener("unload", this);
 
     this._initialized = false;
   },
@@ -152,31 +157,18 @@ let TabView = {
     let self = this;
 
     window.addEventListener("tabviewframeinitialized", function onInit() {
-      window.removeEventListener("tabviewframeinitialized", onInit, false);
+      window.removeEventListener("tabviewframeinitialized", onInit);
 
       self._isFrameLoading = false;
       self._window = self._iframe.contentWindow;
       self._setBrowserKeyHandlers();
 
-      if (self._tabShowEventListener) {
-        gBrowser.tabContainer.removeEventListener(
-          "TabShow", self._tabShowEventListener, false);
-        self._tabShowEventListener = null;
-      }
-      if (self._tabCloseEventListener) {
-        gBrowser.tabContainer.removeEventListener(
-          "TabClose", self._tabCloseEventListener, false);
-        self._tabCloseEventListener = null;
-      }
-      if (self._SSWindowStateReadyListener) {
-        window.removeEventListener(
-          "SSWindowStateReady", self._SSWindowStateReadyListener, false);
-        self._SSWindowStateReadyListener = null;
-      }
-
+      gBrowser.tabContainer.removeEventListener("TabShow", self);
+      gBrowser.tabContainer.removeEventListener("TabClose", self);
+      window.removeEventListener("SSWindowStateReady", self);
       self._initFrameCallbacks.forEach(function (cb) cb());
       self._initFrameCallbacks = [];
-    }, false);
+    });
 
     this._iframe.setAttribute("src", "chrome://tabgroups/content/tabview.html");
     this._deck.appendChild(this._iframe);

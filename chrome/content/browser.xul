@@ -18,17 +18,23 @@
     <key id="key_tabview" key="&tabView.commandkey;" command="Browser:ToggleTabView" modifiers="accel,shift"/>
   </keyset>
 
-  <popupset id="mainPopupSet">
-    <menupopup id="tabContextMenu">
-      <menu id="context_tabViewMenu" label="&moveToGroup.label;"
-            accesskey="&moveToGroup.accesskey;">
-        <menupopup id="context_tabViewMenuPopup"
-                   onpopupshowing="if (event.target == this) TabView.moveToGroupPopupShowing(event);">
-          <menuseparator id="context_tabViewNamedGroups" hidden="true"/>
-          <menuitem id="context_tabViewNewGroup" label="&moveToNewGroup.label;"
-                    oncommand="TabView.moveTabTo(TabContextMenu.contextTab, null);"/>
-        </menupopup>
-      </menu>
-    </menupopup>
-  </popupset>
+  <menupopup id="tabContextMenu">
+    <menu id="context_tabViewMenu" label="&moveToGroup.label;"
+          accesskey="&moveToGroup.accesskey;" position="4">
+      <menupopup id="context_tabViewMenuPopup"
+                 onpopupshowing="if (event.target == this) TabView.moveToGroupPopupShowing(event);">
+        <menuseparator id="context_tabViewNamedGroups" hidden="true"/>
+        <menuitem id="context_tabViewNewGroup" label="&moveToNewGroup.label;"
+                  oncommand="TabView.moveTabTo(TabContextMenu.contextTab, null);"/>
+      </menupopup>
+    </menu>
+  </menupopup>
+
+  <toolbarpalette id="BrowserToolbarPalette">
+    <toolbarbutton id="tabview-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
+                   label="&tabGroupsButton.label;"
+                   command="Browser:ToggleTabView"
+                   tooltiptext="&tabGroupsButton.tooltip;"
+                   observes="tabviewGroupsNumber"/>
+  </toolbarpalette>
 </overlay>
