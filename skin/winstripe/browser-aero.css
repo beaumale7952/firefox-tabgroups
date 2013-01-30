@@ -1,0 +1,9 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+#tab-view:-moz-lwtheme {
+  background-image: url("chrome://tabgroups-plat/skin/grain.png"),
+                    linear-gradient(rgba(255,255,255,0), #CCD9EA 200px, #C7D5E7);
+  background-attachment: fixed;
+}
