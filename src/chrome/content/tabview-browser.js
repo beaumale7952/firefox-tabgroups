@@ -81,7 +81,7 @@ let TabView = {
               this._closedLastVisibleTabBeforeFrameInitialized = false;
               this._window.UI.showTabView(false);
             }
-          });
+          }.bind(this));
         }
         break;
       case "TabClose":

@@ -163,8 +163,6 @@ let UI = {
         let opts = {immediately: true, bounds: box};
         let groupItem = new GroupItem([], opts);
         groupItem.newTab();
-
-        gTabView.firstUseExperienced = true;
       });
 
       iQ(window).bind("unload", function() {
@@ -507,9 +505,6 @@ let UI = {
 
       TabItems.resumePainting();
     }
-
-    if (gTabView.firstUseExperienced)
-      gTabView.enableSessionRestore();
   },
 
   // ----------
@@ -1254,7 +1249,6 @@ let UI = {
         self.setActive(groupItem);
         phantom.remove();
         dragOutInfo = null;
-        gTabView.firstUseExperienced = true;
       } else {
         collapse();
       }

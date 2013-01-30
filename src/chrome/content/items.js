@@ -126,7 +126,6 @@ Item.prototype = {
 
         if (!this.isAGroupItem && !this.parent) {
           new GroupItem([drag.info.$el], {focusTitle: true});
-          gTabView.firstUseExperienced = true;
         }
 
         drag.info = null;

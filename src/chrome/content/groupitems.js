@@ -143,8 +143,6 @@ function GroupItem(listOfEls, options) {
       self._titleFocused = false;
       self.$title[0].setSelectionRange(0, 0);
       self.$titleShield.show();
-      if (self.getTitle())
-        gTabView.firstUseExperienced = true;
       self.save();
     })
     .focus(function() {
