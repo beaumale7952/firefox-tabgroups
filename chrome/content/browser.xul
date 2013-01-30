@@ -46,4 +46,15 @@
                    tooltiptext="&tabGroupsButton.tooltip;"
                    observes="tabviewGroupsNumber"/>
   </toolbarpalette>
+
+  <menupopup id="alltabs-popup">
+    <menuitem id="menu_tabview"
+              class="menuitem-iconic"
+              key="key_tabview"
+              label="&tabGroups.label;"
+              command="Browser:ToggleTabView"
+              observes="tabviewGroupsNumber"/>
+    <menuseparator id="alltabs-popup-separator"/>
+  </menupopup>
+
 </overlay>
