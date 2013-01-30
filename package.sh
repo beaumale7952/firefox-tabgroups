@@ -5,5 +5,4 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 cd src/
-zip ../firefox-tabgroups.xpi *
-cd -
+zip -r ../firefox-tabgroups.xpi *
