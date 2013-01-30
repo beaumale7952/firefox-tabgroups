@@ -64,6 +64,7 @@ let TabView = {
     ctxMenu.addEventListener("popupshowing", this);
 
     window.addEventListener("SSRestoreIntoWindow", this);
+    window.addEventListener("WindowIsClosing", this);
     window.addEventListener("unload", this);
 
     this._initialized = true;
@@ -96,6 +97,12 @@ let TabView = {
         if (this._tabBrowserHasHiddenTabs())
           event.preventDefault();
         break;
+      case "WindowIsClosing":
+        if (this.isVisible()) {
+          event.preventDefault();
+          this.hide();
+        }
+        break;
       case "popupshowing":
         // Hide "Move to Group" if it's a pinned tab.
         document.getElementById("context_tabViewMenu").hidden =
@@ -121,6 +128,7 @@ let TabView = {
 
     window.removeEventListener("SSRestoreIntoWindow", this);
     window.removeEventListener("SSWindowStateReady", this);
+    window.removeEventListener("WindowIsClosing", this);
     window.removeEventListener("unload", this);
 
     this._initialized = false;
@@ -332,24 +340,6 @@ let TabView = {
         });
       }
     }, true);
-  },
-
-  // ----------
-  // Prepares the tab view for undo close tab.
-  prepareUndoCloseTab: function TabView_prepareUndoCloseTab(blankTabToRemove) {
-    if (this._window) {
-      this._window.UI.restoredClosedTab = true;
-
-      if (blankTabToRemove && blankTabToRemove._tabViewTabItem)
-        blankTabToRemove._tabViewTabItem.isRemovedAfterRestore = true;
-    }
-  },
-
-  // ----------
-  // Cleans up the tab view after undo close tab.
-  afterUndoCloseTab: function TabView_afterUndoCloseTab() {
-    if (this._window)
-      this._window.UI.restoredClosedTab = false;
   },
 
   // ----------

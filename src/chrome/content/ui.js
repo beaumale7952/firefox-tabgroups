@@ -27,10 +27,6 @@ let UI = {
   // If true, a select tab has just been closed in TabView.
   _closedSelectedTabInTabView: false,
 
-  // Variable: restoredClosedTab
-  // If true, a closed tab has just been restored.
-  restoredClosedTab: false,
-
   // Variable: _isChangingVisibility
   // Tracks whether we're currently in the process of showing/hiding the tabview.
   _isChangingVisibility: false,
@@ -91,6 +87,9 @@ let UI = {
   // Variable: _originalSmoothScroll
   // Used to keep track of the tab strip smooth scroll value.
   _originalSmoothScroll: null,
+
+  // Preference name that tells whether AeroPeek is enabled.
+  PREF_AEROPEEK_ENABLED: "browser.taskbar.previews.enable",
 
   // ----------
   // Function: toString
@@ -461,6 +460,9 @@ let UI = {
     }
     gTabViewDeck.selectedPanel = gTabViewFrame;
     gWindow.TabsInTitlebar.allowedBy("tabview-open", false);
+    if ("gTaskbarTabGroup" in gWindow) {
+      gWindow.gTaskbarTabGroup.enabled = false;
+    }
     gTabViewFrame.contentWindow.focus();
 
     gBrowser.freezeTitlebar(gTabView.windowTitle);
@@ -534,6 +536,10 @@ let UI = {
     }
     gTabViewDeck.selectedPanel = gBrowserPanel;
     gWindow.TabsInTitlebar.allowedBy("tabview-open", true);
+    if ("gTaskbarTabGroup" in gWindow) {
+      gWindow.gTaskbarTabGroup.enabled =
+        Services.prefs.getBoolPref(this.PREF_AEROPEEK_ENABLED);
+    }
     gBrowser.selectedBrowser.focus();
 
     gBrowser.unfreezeTitlebar();
@@ -675,14 +681,7 @@ let UI = {
               groupItem._children.length == 1 && 
               groupItem._children[0].tab == tab);
 
-          // 2) When a blank tab is active while restoring a closed tab the
-          // blank tab gets removed. The active group is not closed as this is
-          // where the restored tab goes. So do not show the TabView.
-          let tabItem = tab && tab._tabViewTabItem;
-          let closingBlankTabAfterRestore =
-            (tabItem && tabItem.isRemovedAfterRestore);
-
-          if (closingLastOfGroup && !closingBlankTabAfterRestore) {
+          if (closingLastOfGroup) {
             // for the tab focus event to pick up.
             self._closedLastVisibleTab = true;
             self.showTabView();
@@ -766,27 +765,16 @@ let UI = {
       // We want to zoom in if:
       // 1) we didn't just restore a tab via Ctrl+Shift+T
       // 2) the currently selected tab is the last created tab and has a tabItem
-      if (!this.restoredClosedTab &&
-          this._lastOpenedTab == tab && tab._tabViewTabItem) {
+      if (this._lastOpenedTab == tab && tab._tabViewTabItem) {
         tab._tabViewTabItem.zoomIn(true);
         this._lastOpenedTab = null;
         return;
       }
       if (this._closedLastVisibleTab ||
-          (this._closedSelectedTabInTabView && !this.closedLastTabInTabView) ||
-          this.restoredClosedTab) {
-        if (this.restoredClosedTab) {
-          // when the tab view UI is being displayed, update the thumb for the 
-          // restored closed tab after the page load
-          tab.linkedBrowser.addEventListener("load", function onLoad(event) {
-            tab.linkedBrowser.removeEventListener("load", onLoad, true);
-            TabItems._update(tab);
-          }, true);
-        }
+          (this._closedSelectedTabInTabView && !this.closedLastTabInTabView)) {
         this._closedLastVisibleTab = false;
         this._closedSelectedTabInTabView = false;
         this.closedLastTabInTabView = false;
-        this.restoredClosedTab = false;
         return;
       }
     }
@@ -794,7 +782,6 @@ let UI = {
     this._closedLastVisibleTab = false;
     this._closedSelectedTabInTabView = false;
     this.closedLastTabInTabView = false;
-    this.restoredClosedTab = false;
     this._lastOpenedTab = null;
 
     // if TabView is visible but we didn't just close the last tab or
